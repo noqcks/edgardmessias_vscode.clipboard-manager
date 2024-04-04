@@ -49,7 +49,7 @@ export class VSCodeClipboard extends BaseClipboard {
 
 export class ClipboardyClipboard extends BaseClipboard {
   protected readTextInternal(): Thenable<string> {
-    let promise = clipboardy.readText();
+    let promise = clipboardy.read();
 
     /**
      * Fix problem in `clipboardy` when clipboard text is empty on windows
